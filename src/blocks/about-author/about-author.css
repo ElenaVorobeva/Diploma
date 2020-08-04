@@ -1,0 +1,11 @@
+@import url('./__description/about-author__description.css');
+@import url('./__img/about-author__img.css');
+@import url('./__subtitle/about-author__subtitle.css');
+
+.about-author {
+  max-width: 1235px;
+  color: #1A1B22;
+  display: flex;
+  flex-direction: row;
+  white-space: pre-line;
+}

@@ -1,0 +1,8 @@
+.search-result__card-info {
+  display: flex;
+  flex-direction: column;
+  min-height: 304px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 24px;
+}

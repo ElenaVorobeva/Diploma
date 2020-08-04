@@ -1,0 +1,12 @@
+@import url(./__subtitle/loading__subtitle.css);
+@import url(./__img/loading__img.css);
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F6F7;
+  min-height: 282px;
+  display: none;
+}

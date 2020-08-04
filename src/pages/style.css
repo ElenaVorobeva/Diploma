@@ -1,0 +1,18 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts/fonts.css);
+@import url(../blocks/section/section.css);
+@import url(../blocks/root/root.css);
+@import url(../blocks/button/button.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/search-result/search-result.css);
+@import url(../blocks/loading/loading.css);
+@import url(../blocks/loading-not-found/loading-not-found.css);
+@import url(../blocks/about-author/about-author.css);
+@import url(../blocks/footer/footer.css);
+
+.body {
+  margin: 0 auto;
+  font-family: 'Roboto';
+  font-weight: normal;
+}

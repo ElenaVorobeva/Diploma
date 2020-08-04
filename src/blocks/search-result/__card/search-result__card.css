@@ -1,0 +1,6 @@
+.search-result__card {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  min-height: 576px;
+}

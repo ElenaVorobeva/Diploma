@@ -1,0 +1,13 @@
+.header__menu-item {
+  font-size: 18px;
+  line-height: 24px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 34px 0 0;
+  color: #B6BCBF;
+}
+
+.header__menu-item:hover {
+  color: #fff;
+  cursor: pointer;
+}

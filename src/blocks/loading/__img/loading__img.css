@@ -1,0 +1,15 @@
+@keyframes loading-img {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.loading__img {
+  width: 74px;
+  height: 74px;
+  margin-bottom: 24px;
+  animation: loading-img 1.5s linear infinite;
+}

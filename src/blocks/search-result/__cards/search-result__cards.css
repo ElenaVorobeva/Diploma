@@ -1,0 +1,8 @@
+.search-result__cards {
+  margin-top: 60px;
+  padding-bottom: 64px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-gap: 16px 16px;
+  justify-content: center;
+}

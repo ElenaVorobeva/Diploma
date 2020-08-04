@@ -1,0 +1,6 @@
+.header__elements {
+  display: flex;
+  justify-content: space-between;
+  min-width: 1235px;
+  margin: 0 auto;
+}

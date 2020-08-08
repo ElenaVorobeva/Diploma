@@ -1,0 +1,5 @@
+.technologies__column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 713px;
+}

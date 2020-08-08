@@ -7,10 +7,13 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: {
+    main: './src/scripts/index.js',
+    about: './src/scripts/about.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: 'js/[name].[chunkhash].js'
   },
   module: {
     rules: [
@@ -28,15 +31,20 @@ module.exports = {
       },
 
       {
-        test: /\.css$/,
-        use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+        test: /\.css$/i,
+        use: [(isDev ? 'style-loader' : {
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            publicPath: '../'
+          }
+        }),
         {
           loader:'css-loader',
           options: {
             importLoaders: 2
           }
         }, 'postcss-loader'
-              ]},
+        ]},
 
       {
         test: /\.(eot|ttf|woff|woff2)$/i,
@@ -82,23 +90,27 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css',
+      filename: './css/[name].[contenthash].css',
     }),
 
     new HtmlWebpackPlugin({
       inject: false,
+      chunks: ['main'],
       template: './src/index.html',
       filename: 'index.html'
+    }),
+
+    new HtmlWebpackPlugin({
+      inject: false,
+      chunks: ['about'],
+      template: './src/about.html',
+      filename: 'about.html'
     }),
 
     new WebpackMd5Hash(),
 
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
-
-    new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css'
     }),
 
     new OptimizeCssAssetsPlugin({
@@ -112,6 +124,6 @@ module.exports = {
 
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    })
+    }),
   ]
 };

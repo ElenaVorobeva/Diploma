@@ -9,13 +9,13 @@
 </head>
 <body class="body">
 
-<div class="root">
-  <header class="header root__section">
+<div class="root root_bg">
+  <header class="header header_colour_dark root__section">
     <div class="header__elements">
       <p class="header__website-name">NewsAnalyzer</p>
       <ul class="header__menu">
-        <li class="header__menu-item header__menu-item_active"><a class="header__menu-item-link">Главная</a></li>
-        <li class="header__menu-item"><a class="header__menu-item-link">О проекте</a></li>
+        <li class="header__menu-item header__menu-item_active"><a class="header__menu-item-link header__menu-item-link_active link" href="./index.html">Главная</a></li>
+        <li class="header__menu-item"><a class="header__menu-item-link link" href="./about.html">О проекте</a></li>
       </ul>
   </div>
   </header>
@@ -31,11 +31,11 @@
 
   <section class="search-result root__section">
     <div class="search-result__container">
-      <div class="search-result__header">
+      <div class="section__header">
         <h3 class="section__title">Результаты поиска</h3>
-        <div class="search-result__link">
-          <p class="search-result__subtitle">Посмотреть аналитику</p>
-          <img class="search-result__right-arrow" src="<%=require('./images/right-arrow.svg')%>">
+        <div class="section__link">
+          <p class="section__subtitle">Посмотреть аналитику</p>
+          <img class="section__right-arrow" src="<%=require('./images/right-arrow.svg')%>">
         </div>
       </div>
       <div class="search-result__cards">

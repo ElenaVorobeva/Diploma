@@ -1,6 +1,5 @@
-import "./pages/style.css";
+import "../pages/style.css";
 
-import { Menu } from "./scripts/Menu.js";
 
 
 (function () {
@@ -8,18 +7,11 @@ import { Menu } from "./scripts/Menu.js";
 Переменные
 ------------------------------------------------------------------------------*/
 
-const root = document.querySelector('.root');
-const navBar = root.querySelector('.header__menu');
-
-const menu = new Menu();
 
 
 /*------------------------------------------------------------------------------
 Слушатели событий
 ------------------------------------------------------------------------------*/
-navBar.addEventListener('click', function(evt) {
-  console.log(evt.target)
-});
 
 
 /*------------------------------------------------------------------------------

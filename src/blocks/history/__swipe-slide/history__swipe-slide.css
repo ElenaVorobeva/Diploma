@@ -1,0 +1,13 @@
+.history__swipe-slide {
+  list-style: none;
+  width: 400px;
+  height: 288px;
+  background-color: #fff;
+  border-radius: 16px;
+  margin-right: 16px;
+}
+
+
+.history__swipe-slide:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,6 @@
+.technologies__container {
+  margin: 0 auto;
+  max-width: 1235px;
+  display: flex;
+  justify-content: space-between;
+}

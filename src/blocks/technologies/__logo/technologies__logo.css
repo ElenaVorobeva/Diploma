@@ -1,0 +1,15 @@
+@import url(./_bg/technologies__logo_bg_html.css);
+@import url(./_bg/technologies__logo_bg_css.css);
+@import url(./_bg/technologies__logo_bg_js.css);
+@import url(./_bg/technologies__logo_bg_webpack.css);
+
+.technologies__logo {
+  width: 120px;
+  height: 120px;
+  list-style: none;
+  margin-right: 41px;
+}
+
+.technologies__logo:last-child {
+  margin-right: 0;
+}

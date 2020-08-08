@@ -1,0 +1,10 @@
+@import url(./__container/history__container.css);
+@import url(./__swipe-container/history__swipe-container.css);
+@import url(./__swipe-slides/history__swipe-slides.css);
+@import url(./__swipe-slide/history__swipe-slide.css);
+@import url(./__swipe-scrollbar/history__swipe-scrollbar.css);
+@import url(./__swipe-wrapper/history__swipe-wrapper.css);
+
+.history {
+  background-color: #F5F6F7;
+}

@@ -1,0 +1,7 @@
+.history__swipe-container {
+	width: 1232px;
+  display: flex;
+  justify-self: center;
+  margin: 64px auto 0;
+  padding-bottom: 48px;
+}

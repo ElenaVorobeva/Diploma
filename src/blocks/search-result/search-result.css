@@ -1,8 +1,4 @@
 @import url(./__container/search-result__container.css);
-@import url(./__header/search-result__header.css);
-@import url(./__subtitle/search-result__subtitle.css);
-@import url(./__right-arrow/search-result__right-arrow.css);
-@import url(./__link/search-result__link.css);
 @import url(./__cards/search-result__cards.css);
 @import url(./__card/search-result__card.css);
 @import url(./__card-image/search-result__card-image.css);

@@ -1,6 +1,7 @@
-@import url('./__description/about-author__description.css');
-@import url('./__img/about-author__img.css');
-@import url('./__subtitle/about-author__subtitle.css');
+@import url(./__description/about-author__description.css);
+@import url(./__img/about-author__img.css);
+@import url(./__subtitle/about-author__subtitle.css);
+@import url(./_about/about-author_about.css);
 
 .about-author {
   max-width: 1235px;

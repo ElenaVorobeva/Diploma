@@ -3,4 +3,5 @@
   left: 50%;
   bottom: 80px;
   display: flex;
+  transform: translate(-50%, -50%);
 }

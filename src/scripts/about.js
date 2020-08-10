@@ -25,6 +25,7 @@ const mySwiper = new Swiper('.swiper-container', {
   // If we need pagination
   pagination: {
     el: '.history__swipe-pagination',
+    clickable: true,
   },
 
   // Navigation arrows

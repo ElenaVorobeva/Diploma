@@ -1,7 +1,7 @@
 .footer__menu-item {
   list-style-type: none;
   padding: 0;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;

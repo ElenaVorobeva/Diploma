@@ -1,5 +1,5 @@
 @import url(./__subtitle/loading__subtitle.css);
-@import url(./__img/loading__img.css);
+@import url(./__i/loading__i.css);
 
 .loading {
   display: flex;

@@ -16,6 +16,6 @@
 
 .body {
   margin: 0 auto;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-weight: normal;
 }

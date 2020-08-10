@@ -2,40 +2,33 @@
   font-family: 'Roboto Slab';
   font-style:  normal;
   font-weight: normal;
-  src: url(./Roboto_Slab/RobotoSlab-Regular.woff) format("woff2");
+  src: url(./robotoslab-regular.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Roboto Slab';
   font-style:  normal;
   font-weight: 500;
-  src: url(./Roboto_Slab/RobotoSlab-Medium.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: 'Roboto Slab';
-  font-style:  normal;
-  font-weight: bold;
-  src: url(./Roboto_Slab/RobotoSlab-Bold.woff) format("woff2");
+  src: url(./Roboto_Slab/RobotoSlab-Bold.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style:  normal;
   font-weight: normal;
-  src: url(./Roboto/Roboto-Regular.woff2) format("woff2");
+  src: url(./roboto-regular.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style:  normal;
   font-weight: 500;
-  src: url(./Roboto/Roboto-Medium.woff2) format("woff2");
+  src: url(./roboto-medium.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Source Sans Pro';
   font-style:  normal;
   font-weight: normal;
-  src: url(./Source_Sans_Pro/SourceSansPro-Regular.woff2) format("woff2");
+  src: url(./sourcesanspro-regular.woff) format("woff");
 }

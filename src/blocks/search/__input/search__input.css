@@ -6,7 +6,7 @@
   min-width: 608px;
   min-height: 64px;
   flex-grow: 2;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
   text-indent: 24px;
 }
 

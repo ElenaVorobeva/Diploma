@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Yandex.Praktikum Project">
+  <meta name="author" content="Elena Vorobeva">
   <title>NewsAnalyzer</title>
+  <link rel="icon" href="<%=require('./images/favicon.png')%>">
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body class="body">
@@ -72,15 +75,15 @@
 
   <footer class="footer root__section root__section_margin">
     <div class="footer__elements">
-      <p class="footer__info">&copy; 2020 Supersite</p>
+      <p class="footer__info">&copy; 2020 ElenaVorobeva</p>
       <ul class="footer__menu">
-        <li class="footer__menu-item">Главная</li>
-        <li class="footer__menu-item">О проекте</li>
-        <li class="footer__menu-item">Яндекс.Практикум</li>
+        <li class="footer__menu-item"><a class="footer__link link" href="./index.html">Главная</a></li>
+        <li class="footer__menu-item"><a class="footer__link link" href="./about.html">О проекте</a></li>
+        <li class="footer__menu-item"><a class="footer__link link" target="_blank" href="https://praktikum.yandex.ru/">Яндекс.Практикум</a></li>
       </ul>
       <ul class="footer__logos">
-        <li class="footer__logo-item"><a class="footer__link"><img src="<%=require('./images/github-logo.svg')%>"></a></li>
-        <li class="footer__logo-item"><a class="footer__link"><img src="<%=require('./images/facebook-logo.svg')%>"></a></li>
+        <li class="footer__logo-item"><a class="footer__link"><img src="<%=require('./images/github-logo.svg')%>" alt="Логотип Гитхаба"></a></li>
+        <li class="footer__logo-item"><a class="footer__link"><img src="<%=require('./images/facebook-logo.svg')%>" alt="Логотип Фейсбука"></a></li>
       </ul>
     </div>
   </footer>

@@ -6,3 +6,27 @@
   grid-gap: 16px 16px;
   justify-content: center;
 }
+
+@media screen and (max-width: 920px) {
+  .search-result__cards {
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 8px;
+    margin-top: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-result__cards {
+    grid-template-columns: repeat(auto-fill, 224px);
+    grid-gap: 8px;
+
+  }
+}
+
+@media screen and (max-width: 406px) {
+  .search-result__cards {
+    grid-template-columns: repeat(auto-fill, 288px);
+    margin-top: 36px;
+
+  }
+}

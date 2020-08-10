@@ -22,27 +22,39 @@ const mySwiper = new Swiper('.swiper-container', {
   centeredSlides: true,
   width: 400,
 
-  // If we need pagination
   pagination: {
     el: '.history__swipe-pagination',
     clickable: true,
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
 
-  keyboard: {
-    enabled: true,
-    onlyInViewport: true,
-  },
+  breakpoints: {
+
+    769: {
+      width: 400,
+      height: 282,
+      spaceBetween: 8
+    },
+
+    515: {
+      width: 336,
+      height: 242,
+      spaceBetween: 8
+    },
+
+    320: {
+      width: 288,
+      height: 262
+    }
+  }
 })
 
 /*------------------------------------------------------------------------------

@@ -1,4 +1,22 @@
 .for-clients {
-  max-width: 1235px;
+  width: calc(100%-208px);
   margin-bottom: 94px;
+}
+
+@media screen and (max-width: 1280px) {
+  .for-clients {
+    width: calc(100%-104px);
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .for-clients {
+    width: calc(100%-50px);
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .for-clients {
+    width: calc(100%-28px);
+  }
 }

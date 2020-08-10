@@ -21,3 +21,27 @@
 .search__input:focus {
   outline: none;
 }
+
+@media screen and (max-width: 768px) {
+  .search__input {
+    min-width: 448px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .search__input {
+    min-width: 400px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .search__input {
+    min-width: 370px;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .search__input {
+    min-width: 288px;
+  }
+}

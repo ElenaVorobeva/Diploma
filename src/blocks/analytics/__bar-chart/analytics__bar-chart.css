@@ -5,3 +5,10 @@
   margin: 8px 0 0 104px;
   grid-row-gap: 56px;
 }
+
+@media screen and (max-width: 767px) {
+  .analytics__bar-chart {
+    grid-row-gap: 24px;
+  }
+  
+}

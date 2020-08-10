@@ -12,3 +12,22 @@
   color: #fff;
   cursor: pointer;
 }
+
+.header__menu-item:last-child {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 630px) {
+  .header__menu-item {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .header__menu-item {
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 11px;
+  }
+}

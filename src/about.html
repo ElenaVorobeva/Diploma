@@ -23,7 +23,7 @@
   </div>
   </header>
 
-  <section class="for-clients root__section">
+ <section class="for-clients root__section">
     <h3 class="section__title">Клиентам</h3>
     <p class="section__description">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.
 
@@ -41,17 +41,23 @@
       <h3 class="section__title section__title_technologies">Используемые
         технологии</h3>
         <div class="technologies__column">
-          <ul class="technologies__names">
-            <li class="technologies__name">HTML</li>
-            <li class="technologies__name">CSS</li>
-            <li class="technologies__name">Java Script</li>
-            <li class="technologies__name">Webpack</li>
-          </ul>
-          <ul class="technologies__logos">
-            <li class="technologies__logo technologies__logo_bg_html"></li>
-            <li class="technologies__logo technologies__logo_bg_css"></li>
-            <li class="technologies__logo technologies__logo_bg_js"></li>
-            <li class="technologies__logo technologies__logo_bg_webpack"></li>
+          <ul class="technologies__items">
+            <li class="technologies__item">
+              <p class="technologies__name">HTML</p>
+              <div class="technologies__logo technologies__logo_bg_html"></div>
+            </li>
+            <li class="technologies__item">
+              <p class="technologies__name">CSS</p>
+              <div class="technologies__logo technologies__logo_bg_css"></div>
+            </li>
+            <li class="technologies__item">
+              <p class="technologies__name">Java Script</p>
+              <div class="technologies__logo technologies__logo_bg_js"></div>
+            </li>
+            <li class="technologies__item">
+              <p class="technologies__name">Webpack</p>
+              <div class="technologies__logo technologies__logo_bg_webpack"></div>
+            </li>
           </ul>
         </div>
     </div>
@@ -71,13 +77,12 @@
     <div class="history__container">
       <div class="section__header">
         <h3 class="section__title">История коммитов из GitHub</h3>
-        <a class="section__link link" target="_blank" href="https://github.com/ElenaVorobeva/Diploma">
+        <a class="section__link section__link_history link" target="_blank" href="https://github.com/ElenaVorobeva/Diploma">
           <p class="section__subtitle">Открыть в  Github</p>
           <img class="section__right-arrow" src="<%=require('./images/right-arrow.svg')%>" alt="Переход по сслыке">
         </a>
       </div>
     </div>
-
     <div class="history__swipe-container swiper-container">
       <div class="history__swipe-wrapper swiper-wrapper">
           <div class="history__swipe-slide search-result__card swiper-slide">
@@ -127,16 +132,19 @@
         <p class="card__description">With Emmet, you can type CSS-like expressions 
           that can be dynamically parsed, and produce 
           output depending on what you type in the abb....</p>
-    </div>
+      </div>
     
-</div>
+      </div>
       </div>
       <div class="history__swipe-pagination swiper-pagination"></div>
   
       <div class="history__swipe-prev-button swiper-button-prev"></div>
       <div class="history__swipe-next-button swiper-button-next"></div>
     </div>
-  </section>
+    
+    <a class="history__link link" target="_blank" href="https://github.com/ElenaVorobeva/Diploma"><button class="history__button button">Открыть в GitHub</button></a>
+
+  </section> 
 
   <footer class="footer root__section root__section_margin">
     <div class="footer__elements">

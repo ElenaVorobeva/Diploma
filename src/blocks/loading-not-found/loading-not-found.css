@@ -8,5 +8,6 @@
   justify-content: center;
   background-color: #F5F6F7;
   min-height: 374px;
+  width: 100%;
   display: none;
 }

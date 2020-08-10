@@ -10,7 +10,6 @@
 @import url(./__title/_swiper/card__title_swiper.css);
 
 .card {
-  max-width: 400px;
   background-color: #fff;
   border-radius: 16px;
   max-height: 576px;

@@ -1,9 +1,27 @@
 .history__swipe-container {
-  width: 1232px;
+  width: calc(100%-208px);
   height: 100%;
   display: flex;
   justify-self: center;
   margin: 0 auto 0;
   padding: 64px 0 128px 0;
   position: relative;
+}
+
+@media screen and (max-width: 1280px) {
+  .history__swipe-container {
+    width: calc(100%-154px);
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .history__swipe-container {
+    width: calc(100%-50px);
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .history__swipe-container {
+    width: calc(100%-28px);
+  }
 }

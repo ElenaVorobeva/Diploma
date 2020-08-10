@@ -1,0 +1,7 @@
+.technologies__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}

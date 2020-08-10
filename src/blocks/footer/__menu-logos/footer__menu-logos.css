@@ -1,0 +1,17 @@
+.footer__menu-logos {
+  display: flex;
+  flex-basis: 66%;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__menu-logos {
+    flex-basis: 71%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .footer__menu-logos {
+    flex-basis: 100%;
+  }
+}

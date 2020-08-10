@@ -1,3 +1,10 @@
 .section__title_technologies {
   max-width: 344px;
 }
+
+@media screen and (max-width: 1015px) {
+  .section__title_technologies {
+    margin-bottom: 40px;
+  }
+  
+}

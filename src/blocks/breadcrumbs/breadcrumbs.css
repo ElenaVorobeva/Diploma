@@ -4,5 +4,23 @@
 @import url(./__link/_active/breadcrumbs__link_active.css);
 
 .breadcrumbs {
-  max-width: 1235px;
+  width: calc(100%-208px);
+}
+
+@media screen and (max-width: 1280px) {
+  .breadcrumbs {
+    width: calc(100%-104px);
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .breadcrumbs {
+    width: calc(100%-50px);
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .breadcrumbs {
+    width: calc(100%-28px);
+  }
 }

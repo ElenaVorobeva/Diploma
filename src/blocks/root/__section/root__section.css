@@ -1,5 +1,4 @@
 .root__section {
-  /* width: calc(100% - 104px); */
   margin: 0 auto;
   padding-top: 80px;
 }
@@ -12,4 +11,16 @@
 
 .root__section:first-child {
   padding-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .root__section {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .root__section {
+    padding-top: 32px;
+  }
 }

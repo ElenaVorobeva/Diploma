@@ -1,4 +1,34 @@
 .statistic {
-  max-width: 1235px;
+  width: calc(100%-208px);
   margin-bottom: 80px;
+}
+
+@media screen and (max-width: 1280px) {
+  .statistic {
+    width: calc(100%-104px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .statistic {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .statistic {
+    width: calc(100%-50px);
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .statistic {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .statistic {
+    width: calc(100%-28px);
+  }
 }

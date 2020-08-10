@@ -22,7 +22,7 @@
 
   <section class="for-clients root__section">
     <h3 class="section__title">Клиентам</h3>
-    <p class="for-clients__description">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.
+    <p class="section__description">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.
 
       Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.
       
@@ -76,50 +76,83 @@
     </div>
 
     <div class="history__swipe-container swiper-container">
-      <!-- Additional required wrapper -->
       <div class="history__swipe-wrapper swiper-wrapper">
-          <!-- Slides -->
-          <div class="history__swipe-slide swiper-slide">Slide 1</div>
           <div class="history__swipe-slide search-result__card swiper-slide">
-            <div class="search-result__card-image"></div>
-            <div class="search-result__card-info">
-              <p class="search-result__card-data">2 августа, 2019</p>
-              <h4 class="search-result__card-title">Национальное достояние – парки</h4>
-              <p class="search-result__card-description">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+            <div class="card card_swiper">
+              <p class="card__data">14 августа, 2019</p>
+              <div class="card__header">
+                  <div class="card__profile-pic"></div>
+                  <div class="card__header-text">
+                    <h4 class="card__title card__title_swiper">Инга Иванова</h4>
+                    <p class="card__subtitle">ingaiva@yandex.ru</p>
+              </div>
+              </div>
+                <p class="card__description">With Emmet, you can type CSS-like expressions 
+                  that can be dynamically parsed, and produce 
+                  output depending on what you type in the abb....</p>
             </div>
-          </div>
-          <div class="history__swipe-slide swiper-slide">Slide 2</div>
-          <div class="history__swipe-slide swiper-slide">Slide 3</div>
+            
       </div>
-      <!-- If we need pagination -->
+
+      <div class="history__swipe-slide search-result__card swiper-slide">
+        <div class="card card_swiper">
+          <p class="card__data">14 августа, 2019</p>
+          <div class="card__header">
+              <div class="card__profile-pic"></div>
+              <div class="card__header-text">
+                <h4 class="card__title card__title_swiper">Инга Иванова</h4>
+                <p class="card__subtitle">ingaiva@yandex.ru</p>
+          </div>
+          </div>
+            <p class="card__description">With Emmet, you can type CSS-like expressions 
+              that can be dynamically parsed, and produce 
+              output depending on what you type in the abb....</p>
+        </div>
+        
+      </div>
+
+      <div class="history__swipe-slide search-result__card swiper-slide">
+        <div class="card card_swiper">
+          <p class="card__data">14 августа, 2019</p>
+          <div class="card__header">
+              <div class="card__profile-pic"></div>
+              <div class="card__header-text">
+                <h4 class="card__title card__title_swiper">Инга Иванова</h4>
+                <p class="card__subtitle">ingaiva@yandex.ru</p>
+          </div>
+          </div>
+            <p class="card__description">With Emmet, you can type CSS-like expressions 
+              that can be dynamically parsed, and produce 
+              output depending on what you type in the abb....</p>
+        </div>
+        
+      </div>
+
+  <div class="history__swipe-slide search-result__card swiper-slide">
+    <div class="card card_swiper">
+      <p class="card__data">14 августа, 2019</p>
+      <div class="card__header">
+          <div class="card__profile-pic"></div>
+          <div class="card__header-text">
+            <h4 class="card__title card__title_swiper">Инга Иванова</h4>
+            <p class="card__subtitle">ingaiva@yandex.ru</p>
+      </div>
+      </div>
+        <p class="card__description">With Emmet, you can type CSS-like expressions 
+          that can be dynamically parsed, and produce 
+          output depending on what you type in the abb....</p>
+    </div>
+    
+</div>
+      </div>
       <div class="history__swipe-pagination swiper-pagination"></div>
   
-      <!-- If we need navigation buttons -->
-      <div class="history__swipe-next-button swiper-button-prev"></div>
-      <div class="history__swipe-prev-button swiper-button-next"></div>
-  
-      <!-- If we need scrollbar -->
-      <div class="history__swipe-scrollbar swiper-scrollbar"></div>
-  </div>
-
-    <!-- <div class="history__swipe-container">
-
-      <div class="history__swipe-wrapper">
-          <div class="history__swipe-slide">Slide 1</div>
-          <div class="history__swipe-slide">Slide 2</div>
-          <div class="history__swipe-slide">Slide 3</div>
-      </div>
-
-      <div class="history__swipe-pagination"></div>
-  
-      <div class="history__swipe-next-button"></div>
-      <div class="history__swipe-prev-button"></div>
-  
-      <div class="history__swipe-scrollbar"></div>
-  </div> -->
+      <div class="history__swipe-prev-button swiper-button-prev"></div>
+      <div class="history__swipe-next-button swiper-button-next"></div>
+    </div>
   </section>
 
-  <footer class="footer root__section">
+  <footer class="footer root__section root__section_margin">
     <div class="footer__elements">
       <p class="footer__info">&copy; 2020 Supersite</p>
       <ul class="footer__menu">

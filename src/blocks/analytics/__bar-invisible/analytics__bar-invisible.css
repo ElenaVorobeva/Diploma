@@ -1,0 +1,6 @@
+.analytics__bar-invisible {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: calc(100%-104px);
+  margin: 16px 0 0 104px;
+}

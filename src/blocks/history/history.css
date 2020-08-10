@@ -4,6 +4,9 @@
 @import url(./__swipe-slide/history__swipe-slide.css);
 @import url(./__swipe-scrollbar/history__swipe-scrollbar.css);
 @import url(./__swipe-wrapper/history__swipe-wrapper.css);
+@import url(./__swipe-prev-button/history__swipe-prev-button.css);
+@import url(./__swipe-next-button/history__swipe-next-button.css);
+@import url(./__swipe-pagination/history__swipe-pagination.css);
 
 .history {
   background-color: #F5F6F7;

@@ -1,0 +1,6 @@
+.card__profile-pic {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: url(../../../images/profile-pic.png) center no-repeat;
+}

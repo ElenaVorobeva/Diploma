@@ -1,0 +1,8 @@
+@import url(./__item/breadcrumbs__item.css);
+@import url(./__link/breadcrumbs__link.css);
+@import url(./__list/breadcrumbs__list.css);
+@import url(./__link/_active/breadcrumbs__link_active.css);
+
+.breadcrumbs {
+  max-width: 1235px;
+}

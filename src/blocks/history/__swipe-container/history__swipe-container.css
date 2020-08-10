@@ -1,7 +1,9 @@
 .history__swipe-container {
-	width: 1232px;
+  width: 1232px;
+  height: 100%;
   display: flex;
   justify-self: center;
-  margin: 64px auto 0;
-  padding-bottom: 48px;
+  margin: 0 auto 0;
+  padding: 64px 0 128px 0;
+  position: relative;
 }

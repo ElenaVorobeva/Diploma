@@ -15,18 +15,16 @@ const mySwiper = new Swiper('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
+  loopAdditionalSlides: 3,
   centeredSlides: true,
   slidesPerView: 1,
   spaceBetween: 10,
   centeredSlides: true,
-
-
   width: 400,
 
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
+    el: '.history__swipe-pagination',
   },
 
   // Navigation arrows
@@ -54,6 +52,6 @@ const mySwiper = new Swiper('.swiper-container', {
 /*------------------------------------------------------------------------------
 Функции
 ------------------------------------------------------------------------------*/
-
+  mySwiper.update();
   
   })();

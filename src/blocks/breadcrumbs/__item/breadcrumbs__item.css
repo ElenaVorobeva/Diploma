@@ -1,0 +1,17 @@
+.breadcrumbs__item {
+  list-style: none;
+  margin-right: 4px;
+}
+
+.breadcrumbs__item::before {
+  content: '/';
+  color: #B6BCBF;
+}
+
+.breadcrumbs__item:first-child::before {
+  content: '';
+}
+
+.breadcrumbs__item:last-child {
+  margin-right: 0;
+}

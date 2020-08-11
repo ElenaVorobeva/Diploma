@@ -1,0 +1,12 @@
+@import url('./__elements/footer__elements.css');
+@import url('./__info/footer__info.css');
+@import url('./__menu/footer__menu.css');
+@import url('./__menu-item/footer__menu-item.css');
+@import url('./__logos/footer__logos.css');
+@import url('./__logo-item/footer__logo-item.css');
+@import url('./__link/footer__link.css');
+@import url('./__menu-logos/footer__menu-logos.css');
+
+.footer {
+  width: 100%;
+}

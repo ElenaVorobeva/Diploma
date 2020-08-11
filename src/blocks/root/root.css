@@ -1,0 +1,9 @@
+@import url(./_bg/root_bg.css);
+@import url(./__section/root__section.css);
+@import url(./__section/_margin/root_section_margin.css);
+
+.root {
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 1440px;
+}

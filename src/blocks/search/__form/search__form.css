@@ -1,0 +1,12 @@
+.search__form {
+  display: flex;
+  flex-direction: row;
+  max-width: 608px;
+  margin: 56px auto 0;
+}
+
+@media screen and (max-width: 405px) {
+  .search__form {
+    flex-direction: column;
+  }
+}

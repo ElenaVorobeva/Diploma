@@ -1,0 +1,10 @@
+.section__link {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 405px) {
+  .section__link {
+    margin-top: 16px;
+  }
+}

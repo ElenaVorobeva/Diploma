@@ -1,0 +1,26 @@
+@import url(./__item/breadcrumbs__item.css);
+@import url(./__link/breadcrumbs__link.css);
+@import url(./__list/breadcrumbs__list.css);
+@import url(./__link/_active/breadcrumbs__link_active.css);
+
+.breadcrumbs {
+  width: calc(100%-208px);
+}
+
+@media screen and (max-width: 1280px) {
+  .breadcrumbs {
+    width: calc(100%-104px);
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .breadcrumbs {
+    width: calc(100%-50px);
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .breadcrumbs {
+    width: calc(100%-28px);
+  }
+}

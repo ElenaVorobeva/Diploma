@@ -1,0 +1,29 @@
+@import url(./__wrapper/analytics__wrapper.css);
+@import url(./__header/analytics__header.css);
+@import url(./__table-container/analytics__table-container.css);
+@import url(./__title/analytics__title.css);
+@import url(./__bar-chart/analytics__bar-chart.css);
+@import url(./__bar-item/analytics__bar-item.css);
+@import url(./__bar-invisible/analytics__bar-invisible.css);
+@import url(./__bar-invisible-item/analytics__bar-invisible-item.css);
+@import url(./__result-text/analytics__result-text.css);
+@import url(./__subtitle/analytics__subtitle.css);
+@import url(./__span/analytics__span.css);
+
+.analytics {
+  background: #F5F6F7;
+  padding-bottom: 80px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .analytics {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .analytics {
+    padding-bottom: 32px;
+  }
+}

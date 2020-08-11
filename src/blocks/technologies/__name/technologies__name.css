@@ -1,0 +1,11 @@
+.technologies__name {
+  list-style: none;
+  min-width: 120px;
+  margin-right: 41px;
+  text-align: center;
+  margin: 0;
+}
+
+.technologies__name:last-child {
+  margin-right: 0;
+}

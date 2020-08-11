@@ -1,0 +1,32 @@
+.about-author__img {
+  margin-right: 56px;
+  max-width: 464px;
+}
+
+@media screen and (max-width: 980px) {
+  .about-author__img {
+  max-width: 300px;
+  max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .about-author__img {
+  max-width: 250px;
+  max-height: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-author__img {
+  max-width: 232px;
+  max-height: 232px;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .about-author__img {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}

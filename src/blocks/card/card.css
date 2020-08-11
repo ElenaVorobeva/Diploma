@@ -1,0 +1,20 @@
+@import url(./__data/card__data.css);
+@import url(./__description/card__description.css);
+@import url(./__image/card__image.css);
+@import url(./__info/card__info.css);
+@import url(./__title/card__title.css);
+@import url(./__subtitle/card__subtitle.css);
+@import url(./__profile-pic/card__profile-pic.css);
+@import url(./__header/card__header.css);
+@import url(./__header-text/card__header-text.css);
+@import url(./__title/_swiper/card__title_swiper.css);
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  max-height: 576px;
+}
+
+.card:hover {
+  cursor: pointer;
+}

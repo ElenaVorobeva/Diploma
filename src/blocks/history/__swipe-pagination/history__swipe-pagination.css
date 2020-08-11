@@ -1,0 +1,7 @@
+.history__swipe-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  display: flex;
+  transform: translate(-50%, -50%);
+}

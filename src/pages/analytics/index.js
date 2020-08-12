@@ -1,4 +1,4 @@
-import "../pages/analytics.css";
+import "./analytics.css";
 
 (function () {
 /*------------------------------------------------------------------------------

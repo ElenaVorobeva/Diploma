@@ -12,6 +12,7 @@
 @import url(./blocks/about-author/about-author.css);
 @import url(./blocks/card/card.css);
 @import url(./blocks/footer/footer.css);
+@import url(./blocks/active/active.css);
 
 .body {
   margin: 0 auto;

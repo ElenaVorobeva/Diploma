@@ -10,13 +10,8 @@ export class CardList {
     this._container.append(newCard);
   }
 
-  // render() {
-    
-  // }
-
   render() {
     this._cards.slice(0, 3).forEach(card => {
-    // this._cards.forEach(card => {
       this.addCard(card.source.name, card.title, card.publishedAt, card.description, card.urlToImage);
     })
   }

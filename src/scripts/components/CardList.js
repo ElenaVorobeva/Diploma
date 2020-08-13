@@ -1,3 +1,5 @@
+import { LocalStorage } from '../modules/LocalStorage.js'
+
 export class CardList {
   constructor(container, cards, card) {
     this._container = container;
@@ -10,9 +12,18 @@ export class CardList {
     this._container.append(newCard);
   }
 
-  render() {
-    this._cards.slice(0, 3).forEach(card => {
+  pagination = (storedCardList) => {
+    const newCardList = [];
+    for (let i = 0; i < 3; i++) {
+      newCardList.push(storedCardList.pop());
+    }
+    this._render(newCardList);
+  }
+
+  _render = (newCardList) => {
+    newCardList.forEach(card => {
       this.addCard(card.source.name, card.title, card.publishedAt, card.description, card.urlToImage);
     })
   }
+
 }

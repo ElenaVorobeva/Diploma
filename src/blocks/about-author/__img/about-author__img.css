@@ -1,6 +1,7 @@
 .about-author__img {
   margin-right: 56px;
   max-width: 464px;
+  max-height: 464px;
   border-radius: 50%;
 }
 

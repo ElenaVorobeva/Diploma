@@ -14,8 +14,9 @@ import { buildNewsApiUrl } from './scripts/utils/buildNewsApiUrl.js';
 /*------------------------------------------------------------------------------
 Переменные
 ------------------------------------------------------------------------------*/
+let cardsArray = [];
+
 const storedData = new LocalStorage();
-const sectionsState = new SectionsState();
 
 const root = document.querySelector('.root');
 const searchInput = root.querySelector('.search__input');
@@ -26,7 +27,14 @@ const searchResultSection = root.querySelector('.search-result');
 const loading = root.querySelector('.loading');
 const loadingNotFound = root.querySelector('.loading-not-found');
 
-let cardsArray = [];
+const searchResultSectionTrue = new SectionsState(searchResultSection, true);
+const searchResultSectionFalse = new SectionsState(searchResultSection, false);
+const loadingSectionTrue = new SectionsState(loading, true);
+const loadingSectionFalse = new SectionsState(loading, false);
+const loadingNotFoundSectionTrue = new SectionsState(loadingNotFound, true);
+const loadingNotFoundSectionFalse = new SectionsState(loadingNotFound, false);
+
+
 
 /*------------------------------------------------------------------------------
 Функции
@@ -34,6 +42,10 @@ let cardsArray = [];
 // создаем карточку в доме
 function createACard(sourceName, title, publishedAt, description, urlToImage) {
   return new Card(sourceName, title, publishedAt, description, urlToImage).createCard();
+}
+
+function newCardList(container, array, card) {
+  return new CardList(container, array, card).pagination(cardsArray);
 }
 
 /*------------------------------------------------------------------------------
@@ -45,9 +57,9 @@ searchButton.addEventListener('click', function(e) {
   const newsApiUrl = buildNewsApiUrl(searchInput.value);
   const newsApi = new NewsApi(newsApiUrl);
 
-  sectionsState.sectionState(searchResultSection, false);
-  sectionsState.sectionState(loadingNotFound, false);
-  sectionsState.sectionState(loading, true);
+  searchResultSectionFalse.sectionState();
+  loadingNotFoundSectionFalse.sectionState();
+  loadingSectionTrue.sectionState();
 
   newsApi.getCards()
   .then(res => {
@@ -58,32 +70,38 @@ searchButton.addEventListener('click', function(e) {
     storedData.setKeyWord(searchInput.value);
 
     if (cardsArray.length === 0) {
-      sectionsState.sectionState(loading, false);
-      sectionsState.sectionState(loadingNotFound, true);
+      loadingSectionFalse.sectionState();
+      loadingNotFoundSectionTrue.sectionState();
     } else {
-      const news = new CardList(cardContainer, storedData.getItemNews(), createACard)
-      sectionsState.sectionState(loading, false);
-      sectionsState.sectionState(searchResultSection, true);
-      news.render();
+      loadingSectionFalse.sectionState();
+      searchResultSectionTrue.sectionState();
+      newCardList(cardContainer, cardsArray, createACard);
     }
+
+    return cardsArray;
   })
   .catch((error) => {
     console.error('Невозможно продолжить', error);
   });
 });
 
+cardButton.addEventListener('click', e => {
+  e.preventDefault();
+
+  newCardList(cardContainer, storedData.getItemNews(), createACard);
+})
+
 /*------------------------------------------------------------------------------
 Вызовы функции
 ------------------------------------------------------------------------------*/
+searchResultSectionFalse.sectionState();
 
-const localStoredCards = storedData.getItemNews();
-sectionsState.sectionState(searchResultSection, false);
-
-if (localStoredCards.length !== 0) {
+if (storedData.getItemNews().length !== 0) {
   searchInput.value = storedData.getKeyWord();
-  const news = new CardList(cardContainer, storedData.getItemNews(), createACard)
-  sectionsState.sectionState(searchResultSection, true);
-  news.render();
+  searchResultSectionTrue.sectionState();
+  cardsArray = storedData.getItemNews();
+
+  newCardList(cardContainer, cardsArray, createACard);
 }
 
 })();

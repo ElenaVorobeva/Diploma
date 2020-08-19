@@ -8,11 +8,13 @@
 @import url(./__header/card__header.css);
 @import url(./__header-text/card__header-text.css);
 @import url(./__title/_swiper/card__title_swiper.css);
+@import url(./__link/card__link.css);
 
 .card {
   background-color: #fff;
   border-radius: 16px;
   max-height: 576px;
+  z-index: 1;
 }
 
 .card:hover {

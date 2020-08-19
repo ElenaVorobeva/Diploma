@@ -1,1 +1,1 @@
-export const NEWS_DATE = 7;
+export const NEWS_DATE = 6;

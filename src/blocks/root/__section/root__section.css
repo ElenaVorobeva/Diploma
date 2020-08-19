@@ -24,3 +24,9 @@
     padding-top: 32px;
   }
 }
+
+@media screen and (max-width: 382px) {
+  .root__section {
+    padding-top: 14px;
+  }
+}

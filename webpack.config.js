@@ -78,10 +78,7 @@ module.exports = {
                 },
                 gifsicle: {
                   interlaced: false,
-                },
-                // webp: {
-                //   quality: 75
-                // }
+                }
               }
             },
         ],
@@ -126,10 +123,6 @@ module.exports = {
               preset: ['default'],
       },
       canPrint: true
-    }),
-
-    new webpack.DefinePlugin({
-      'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
+    })
   ]
 };

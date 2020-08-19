@@ -4,9 +4,10 @@ import { NewsApi } from './scripts/modules/NewsApi.js';
 import { LocalStorage } from './scripts/modules/LocalStorage.js';
 
 
-import { Card } from './scripts/components/Card.js';
+import { newsCard } from './scripts/components/newsCard.js';
 import { CardList } from './scripts/components/CardList.js';
 import { SectionsState } from './scripts/components/SectionsState.js';
+import { Validation } from './scripts/components/Validation.js';
 
 import { buildNewsApiUrl } from './scripts/utils/buildNewsApiUrl.js';
 
@@ -34,61 +35,74 @@ const loadingSectionFalse = new SectionsState(loading, false);
 const loadingNotFoundSectionTrue = new SectionsState(loadingNotFound, true);
 const loadingNotFoundSectionFalse = new SectionsState(loadingNotFound, false);
 
+const validation = new Validation();
+
 
 
 /*------------------------------------------------------------------------------
 Функции
 ------------------------------------------------------------------------------*/
 // создаем карточку в доме
-function createACard(sourceName, title, publishedAt, description, urlToImage) {
-  return new Card(sourceName, title, publishedAt, description, urlToImage).createCard();
+function createACard(url, sourceName, title, publishedAt, description, urlToImage) {
+  return new newsCard(url, sourceName, title, publishedAt, description, urlToImage).createCard();
 }
 
-function newCardList(container, array, card) {
-  return new CardList(container, array, card).pagination(cardsArray);
+function newCardList(container, array, card, button) {
+  return new CardList(container, array, card, button).pagination(cardsArray);
 }
 
 /*------------------------------------------------------------------------------
 Слушатели событий
 ------------------------------------------------------------------------------*/
 
+searchInput.addEventListener('input', () => {
+  validation.checkField(searchInput);
+})
+
 searchButton.addEventListener('click', function(e) {
   e.preventDefault();
-  const newsApiUrl = buildNewsApiUrl(searchInput.value);
-  const newsApi = new NewsApi(newsApiUrl);
 
-  searchResultSectionFalse.sectionState();
-  loadingNotFoundSectionFalse.sectionState();
-  loadingSectionTrue.sectionState();
+  if (validation.checkField(searchInput)) {
+    const newsApiUrl = buildNewsApiUrl(searchInput.value);
+    const newsApi = new NewsApi(newsApiUrl);
 
-  newsApi.getCards()
-  .then(res => {
-    cardContainer.innerHTML = '';
-    localStorage.clear();
-    cardsArray = [...res.articles];
-    storedData.setItemNews(cardsArray);
-    storedData.setKeyWord(searchInput.value);
+    searchResultSectionFalse.sectionState();
+    loadingNotFoundSectionFalse.sectionState();
+    loadingSectionTrue.sectionState();
 
-    if (cardsArray.length === 0) {
-      loadingSectionFalse.sectionState();
-      loadingNotFoundSectionTrue.sectionState();
-    } else {
-      loadingSectionFalse.sectionState();
-      searchResultSectionTrue.sectionState();
-      newCardList(cardContainer, cardsArray, createACard);
-    }
+    newsApi.getCards()
+    .then(res => {
+      cardContainer.innerHTML = '';
+      localStorage.clear();
 
-    return cardsArray;
-  })
-  .catch((error) => {
-    console.error('Невозможно продолжить', error);
-  });
+      storedData.setAllRes(res);
+
+      cardsArray = [...res.articles];
+      storedData.setItemNews(cardsArray);
+      storedData.setKeyWord(searchInput.value);
+
+
+      if (cardsArray.length === 0) {
+        loadingSectionFalse.sectionState();
+        loadingNotFoundSectionTrue.sectionState();
+      } else {
+        loadingSectionFalse.sectionState();
+        searchResultSectionTrue.sectionState();
+        newCardList(cardContainer, cardsArray, createACard, cardButton);
+      }
+
+      return cardsArray;
+    })
+    .catch((error) => {
+      console.error('Невозможно продолжить', error);
+    });
+  }
 });
 
 cardButton.addEventListener('click', e => {
   e.preventDefault();
 
-  newCardList(cardContainer, storedData.getItemNews(), createACard);
+  newCardList(cardContainer, storedData.getItemNews(), createACard, cardButton);
 })
 
 /*------------------------------------------------------------------------------
@@ -101,7 +115,8 @@ if (storedData.getItemNews().length !== 0) {
   searchResultSectionTrue.sectionState();
   cardsArray = storedData.getItemNews();
 
-  newCardList(cardContainer, cardsArray, createACard);
+  newCardList(cardContainer, cardsArray, createACard, cardButton);
 }
 
 })();
+

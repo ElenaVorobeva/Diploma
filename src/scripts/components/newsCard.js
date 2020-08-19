@@ -1,5 +1,6 @@
-export class Card {
-  constructor(sourceName, title, publishedAt, description, urlToImage) {
+export class newsCard {
+  constructor(urlToNews, sourceName, title, publishedAt, description, urlToImage) {
+    this._urlToNews = urlToNews;
     this._sourceName = sourceName;
     this._title = title;
     this._publishedAt = publishedAt;
@@ -9,6 +10,7 @@ export class Card {
 
   createCard() {
     const cardContainer = `
+    <a class="card__link link" target="_blank">
     <img class="card__image">
     <div class="card__info">
       <p class="card__data"></p>
@@ -16,12 +18,14 @@ export class Card {
       <p class="card__description"></p>
       <p class="search-result__card-company-name">Лента.ру</p>
     </div>
+    </a>
     `;
 
     const cardElement = document.createElement('div');
     cardElement.classList.add('card');
     cardElement.insertAdjacentHTML('afterbegin', cardContainer);
 
+    cardElement.querySelector('.card__link').href = this._urlToNews;
     cardElement.querySelector('.card__image').src = `${this._urlToImage}`;
     cardElement.querySelector('.card__data').textContent = this._publishedAt;
     cardElement.querySelector('.card__title').textContent = this._title;

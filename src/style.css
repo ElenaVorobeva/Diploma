@@ -13,6 +13,7 @@
 @import url(./blocks/card/card.css);
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/active/active.css);
+@import url(./blocks/hidden/hidden.css);
 
 .body {
   margin: 0 auto;

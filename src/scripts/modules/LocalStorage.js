@@ -15,4 +15,12 @@ export class LocalStorage {
     return JSON.parse(localStorage.getItem('keyWord'));
   }
 
+  setAllRes = (item) => {
+    localStorage.setItem('allRes', JSON.stringify(item));
+  }
+
+  getAllRes = () => {
+    return JSON.parse(localStorage.getItem('allRes'))
+  }
+
 }

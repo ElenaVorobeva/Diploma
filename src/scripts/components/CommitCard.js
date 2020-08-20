@@ -7,6 +7,7 @@ export class CommitCard {
     this._description = description;
   }
 
+  //создает пустую карточку для коммита
   createCommitCard() {
     const cardContainer = `
     <div class="card card_swiper">

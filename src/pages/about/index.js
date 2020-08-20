@@ -15,6 +15,8 @@ Swiper.use([Navigation, Pagination]);
 const cardContainer = document.querySelector('.history__swipe-wrapper');
 
 const commitUrl = 'https://api.github.com/repos/elenavorobeva/Diploma/commits';
+
+//настраивает свайпер
 const mySwiper = new Swiper('.swiper-container', {
   direction: 'horizontal',
   loop: true,
@@ -56,15 +58,6 @@ const mySwiper = new Swiper('.swiper-container', {
   }
 })
 
-function createCommitCardList(container, card) {
-  return new CommitCardList(container, card);
-}
-
-function createACard(date, img, name, email, description) {
-  return new CommitCard(date, img, name, email, description).createCard();
-}
-
-
 const commitCardsArray = new CommitCardsApi(commitUrl);
 commitCardsArray.getCards()
 .then(res => {
@@ -72,22 +65,21 @@ commitCardsArray.getCards()
   mySwiper.init();
 })
 
-/*------------------------------------------------------------------------------
-Слушатели событий
-------------------------------------------------------------------------------*/
-  
-  
+
 /*------------------------------------------------------------------------------
 Функции
 ------------------------------------------------------------------------------*/
-  function createACard(date, img, name, email, description) {
-    return new CommitCard(date, img, name, email, description).createCommitCard();
-  }
+//создает карточку
+function createACard(date, img, name, email, description) {
+  return new CommitCard(date, img, name, email, description).createCommitCard();
+}
 
-  function newCommitCardList(container, array, card) {
-    return new CommitCardList(container, array, card);
-  }
+//добавляет в нее нужную инфу
+function createCommitCardList(container, card) {
+  return new CommitCardList(container, card);
+}
 
+//запускает свайпер после подгрузки карточек
 mySwiper.update();
-  
-  })();
+
+})();

@@ -25,11 +25,6 @@ const buildDateForAnalytics = new BuildDateForAnalytics();
 const totalResults = storedData.getAllRes().totalResults;
 const headersResults = titleCounter(storedData.getAllRes());
 
-
-/*------------------------------------------------------------------------------
-Слушатели событий
-------------------------------------------------------------------------------*/
-
 /*------------------------------------------------------------------------------
 Функции
 ------------------------------------------------------------------------------*/
@@ -37,46 +32,40 @@ inputWord.textContent = `Вы спросили: «${storedData.getKeyWord()}»`
 totalResultsOfNews.textContent = `${totalResults}`;
 totalResultsInHeaders.textContent = titleCounter(storedData.getAllRes());
 
-
-function buildChart(container, chart) {
-  return new BuildChart(container, chart);
-}
-
-function createAChart (month, dateOne, dateTwo, dateThree, dateFour, dateFive, dateSix, dateSeven, spanOne, spanTwo, spanThree, spanFour, spanFive, spanSix, spanSeven, textOne, textTwo, textThree, textFour, textFive, textSix, textSeven) {
-  return new AnalyticsChart(month, dateOne, dateTwo, dateThree, dateFour, dateFive, dateSix, dateSeven, spanOne, spanTwo, spanThree, spanFour, spanFive, spanSix, spanSeven, textOne, textTwo, textThree, textFour, textFive, textSix, textSeven).createChart();
-}
-
+//это функция объединяет массив дат, которые используются для поиска новостей,
+//с массивом дат, которые были использованы при получении карточек,
+// записывая данные таким образом, что, если даты не было во втором массиве, туда попадает 0
 const getNumber = () => {
-  let number = {};
-  let newNumber = {};
-  let finalNumber = {};
+  let numbers = {};
+  let newNumbers = {};
+  let finalNumbers = {};
   let news = {};
 
-  number = {...buildDateForAnalytics.buildDateForAnalytics().datesArray}
+  numbers = {...buildDateForAnalytics.buildDateForAnalytics().datesArray}
   news = {...newsCounter()}
 
-  for (let key in number) {
-    newNumber[number[key]] = key;
+  for (let key in numbers) {
+    newNumbers[numbers[key]] = key;
   }
 
-  for (let key in newNumber) {
-    finalNumber[key] = key
+  for (let key in newNumbers) {
+    finalNumbers[key] = key
   }
 
-  for (let value in newNumber) {
-    finalNumber[value] = 0;
+  for (let value in newNumbers) {
+    finalNumbers[value] = 0;
   }
 
-  for (let i in finalNumber) {
+  for (let i in finalNumbers) {
     if (Object.keys(news).includes(i)) {
-      finalNumber[i] = news[i];
+      finalNumbers[i] = news[i];
     }
   }
 
-
-  return finalNumber;
+  return finalNumbers;
 }
 
+// считает процент упоминаний в заголовках в определенный день от общего кол-ва заголовков
 const getPercentage = () => {
   let results = [];
   results = Object.values(getNumber());
@@ -88,6 +77,17 @@ const getPercentage = () => {
   return results;
 }
 
+//создает пустой график
+function createAChart (month, dateOne, dateTwo, dateThree, dateFour, dateFive, dateSix, dateSeven, spanOne, spanTwo, spanThree, spanFour, spanFive, spanSix, spanSeven, textOne, textTwo, textThree, textFour, textFive, textSix, textSeven) {
+  return new AnalyticsChart(month, dateOne, dateTwo, dateThree, dateFour, dateFive, dateSix, dateSeven, spanOne, spanTwo, spanThree, spanFour, spanFive, spanSix, spanSeven, textOne, textTwo, textThree, textFour, textFive, textSix, textSeven).createChart();
+}
+
+//добавляет в него нужную инфу
+function buildChart(container, chart) {
+  return new BuildChart(container, chart);
+}
+
+//отрисовывает график с полученной информацией
 buildChart(container, createAChart(
   MONTHS[data],
   getPercentage()[0],

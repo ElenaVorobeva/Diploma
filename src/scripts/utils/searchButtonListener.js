@@ -5,6 +5,7 @@ import { validation } from '../components/validation.js'
 import { buildNewsApiUrl } from './buildNewsApiUrl.js';
 import { NewsApi } from '../modules/NewsApi.js';
 import { LocalStorage } from '../modules/LocalStorage.js';
+import { CreateCardsArray } from './createCardsArray.js';
 
 const root = document.querySelector('.root');
 const searchInput = root.querySelector('.search__input');
@@ -22,11 +23,15 @@ const loadingNotFoundSectionTrue = new SectionsState(loadingNotFound, true);
 const loadingNotFoundSectionFalse = new SectionsState(loadingNotFound, false);
 
 const storedData = new LocalStorage();
-
+const createCardsArray = new CreateCardsArray();
 
 let cardsArray = [];
 
-
+//здесь происходит магия
+//при нажатии на кнопку создается отдельный массив,
+//затем он записывается в функцию, которая позже будет передавать данные для пагинации
+//затем в localStorage, чтобы данные сохранялись при перезагрузке
+//затем отображаются нужные секции и карточки, если имеются
 export const searchButtonListener = (e) => {
   e.preventDefault();
 
@@ -44,11 +49,12 @@ export const searchButtonListener = (e) => {
       localStorage.clear();
 
       storedData.setAllRes(res);
-
       cardsArray = [...res.articles];
+
+      createCardsArray.setArray(cardsArray)
+
       storedData.setItemNews(cardsArray);
       storedData.setKeyWord(searchInput.value);
-
 
       if (cardsArray.length === 0) {
         loadingSectionFalse.sectionState();
@@ -56,10 +62,8 @@ export const searchButtonListener = (e) => {
       } else {
         loadingSectionFalse.sectionState();
         searchResultSectionTrue.sectionState();
-        newCardList(cardContainer, createACard, cardButton).pagination(cardsArray);
+        newCardList(cardContainer, createACard, cardButton).pagination(createCardsArray.getArray());
       }
-
-      return cardsArray;
     })
     .catch((error) => {
       console.error('Невозможно продолжить', error);

@@ -1,5 +1,6 @@
 import { dateToStartWith } from '../utils/dateToStartWith.js';
 
+//формирует ссылку для запроса
 export const buildNewsApiUrl = (keyWord) => {
   const API_URL = NODE_ENV === 'production' ? 'https://nomoreparties.co/news/' : 'https://newsapi.org/';
 

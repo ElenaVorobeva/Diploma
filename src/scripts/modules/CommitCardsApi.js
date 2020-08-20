@@ -1,10 +1,9 @@
-const { CommitCard } = require("../components/CommitCard")
-
 export class CommitCardsApi {
   constructor(url) {
     this._url = url;
   }
 
+  //запрос для коммитов
   getCards = () => {
     return fetch(this._url)
     .then(res => {

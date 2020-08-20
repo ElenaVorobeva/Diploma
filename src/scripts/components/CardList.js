@@ -7,11 +7,13 @@ export class CardList {
     this._button = button;
   }
 
+  //отрисовывет карточку с нужной инфой
   addCard(url, sourceName, title, publishedAt, description, urlToImage) {
     const newCard = this._card(url, sourceName, title, publishedAt, description, urlToImage);
     this._container.append(newCard);
   }
 
+  //разбивает массив карточек по три и отрисовывает их
   pagination = (storedCardList) => {
     const newCardList = [];
     for (let i = 0; i < 3; i++) {
@@ -27,12 +29,14 @@ export class CardList {
     }
   }
 
+  //отрисовывает массив с пришедшей инфой
   _render = (newCardList) => {
     newCardList.forEach(card => {
       this.addCard(card.url, card.source.name, card.title, card.publishedAt.slice(0, 10), card.description, card.urlToImage);
     })
   }
 
+  //показывает или скывает кнопку "Показать еще"
   _cardButtonIsShown = (state) => {
     state ?
     this._button.classList.remove('hidden') :

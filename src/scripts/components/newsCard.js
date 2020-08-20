@@ -8,6 +8,8 @@ export class newsCard {
     this._urlToImage = urlToImage;
   }
 
+  //создает пустую карточку новостей
+  //для карточек без картинки или с битой ссылкой добавляется своя картинка
   createCard() {
     const cardContainer = `
     <a class="card__link link" target="_blank">

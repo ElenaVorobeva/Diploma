@@ -7,8 +7,7 @@ const searchInput = document.querySelector('.search__input');
 const searchButton = document.querySelector('.search__button');
 const cardButton = document.querySelector('.search-result__button');
 
-
-
+//навешивает указанные слушаетлеи указанным элементам
 export const setEventListener = new EventListeners([
   {
     element: searchInput,

@@ -27,6 +27,7 @@ export class AnalyticsChart {
     this._textSeven = textSeven;
   }
 
+  //создает пустой график
   createChart() {
     const chart = `
     <h4 class="analytics__title">Аналитика по дням</h4>

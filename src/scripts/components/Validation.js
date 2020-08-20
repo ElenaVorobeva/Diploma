@@ -1,3 +1,4 @@
+//валидация поиска
 export const validation = (field) => {
     const FIELD_TYPE = NODE_ENV === 'production' ? field.parentElement.nextSibling : field.parentElement.nextSibling.nextSibling;
 

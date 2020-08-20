@@ -5,7 +5,7 @@ export const newsCounter = () => {
   const articles = JSON.parse(localStorage.getItem('allRes'));
   const dates = new BuildDateForAnalytics().buildDateForAnalytics().datesArray;
   let dateOfTitleMentioned = [];
-
+  
   articles.articles.forEach(article => {
     if (article.title.includes(searchWord)) {
       dateOfTitleMentioned.push(article.publishedAt.slice(8, 10));

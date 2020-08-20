@@ -33,7 +33,7 @@ export class AnalyticsChart {
     <div class="analytics__header">
       <p class="analytics__subtitle analytics__subtitle_date">Дата
         (месяц)</p>
-      <p class="analytics__subtitle">Кол-во упоминаний</p>
+      <p class="analytics__subtitle">Кол-во упоминаний, %</p>
     </div>
 
     <div class="analytics__bar-invisible">

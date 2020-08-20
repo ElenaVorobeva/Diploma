@@ -11,7 +11,7 @@ export class newsCard {
   createCard() {
     const cardContainer = `
     <a class="card__link link" target="_blank">
-    <img class="card__image">
+    <img class="card__image" onerror="javascript:this.src='https://i.ibb.co/yN69xCr/news.jpg'">
     <div class="card__info">
       <p class="card__data"></p>
       <h4 class="card__title"></h4>

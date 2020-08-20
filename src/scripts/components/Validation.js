@@ -1,5 +1,4 @@
-export class Validation {
-  checkField = (field) => {
+export const validation = (field) => {
     const FIELD_TYPE = NODE_ENV === 'production' ? field.parentElement.nextSibling : field.parentElement.nextSibling.nextSibling;
 
     if (field.value.length === 0) {
@@ -11,5 +10,4 @@ export class Validation {
       FIELD_TYPE.disabled = false;
       return true;
     }
-  }
 }

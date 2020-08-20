@@ -1,10 +1,9 @@
-import { LocalStorage } from '../modules/LocalStorage.js'
+import { removeSearchButtonEventListener } from '../utils/removeSearchButtonEventListener.js';
 
 export class CardList {
-  constructor(container, cards, card, button) {
+  constructor(container, card, button) {
     this._container = container;
     this._card = card;
-    this._cards = cards;
     this._button = button;
   }
 
@@ -24,6 +23,7 @@ export class CardList {
     this._render(newCardList);
     if (storedCardList.length === 0) {
       this._cardButtonIsShown(false);
+      removeSearchButtonEventListener.removeHandlers();
     }
   }
 

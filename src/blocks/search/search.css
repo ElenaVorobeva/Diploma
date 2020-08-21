@@ -3,9 +3,10 @@
 @import url('./__form/search__form.css');
 @import url('./__input/search__input.css');
 @import url('./__button/search__button.css');
+@import url('./__input-span/search__input-span.css');
 
 .search {
-  padding-bottom: 80px;
+  padding-bottom: 52px;
   color: #fff;
   max-width: 608px;
 }

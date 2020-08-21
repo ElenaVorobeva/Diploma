@@ -8,9 +8,9 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   entry: {
-    main: './src/scripts/index.js',
-    about: './src/scripts/about.js',
-    analytics: './src/scripts/analytics.js',
+    main: './src/index.js',
+    about: "./src/pages/about/index.js",
+    analytics: "./src/pages/analytics/index.js",
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -78,10 +78,7 @@ module.exports = {
                 },
                 gifsicle: {
                   interlaced: false,
-                },
-                // webp: {
-                //   quality: 75
-                // }
+                }
               }
             },
         ],
@@ -96,23 +93,21 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       inject: false,
-      chunks: ['main'],
-      template: './src/index.html',
-      filename: 'index.html'
+      template: "./src/index.html",
+      filename: "index.html",
+      chunks: ["main"],
     }),
-
     new HtmlWebpackPlugin({
       inject: false,
-      chunks: ['about'],
-      template: './src/about.html',
-      filename: 'about.html'
+      template: "./src/pages/about/about.html",
+      filename: "about.html",
+      chunks: ["about"],
     }),
-
     new HtmlWebpackPlugin({
       inject: false,
-      chunks: ['analytics'],
-      template: './src/analytics.html',
-      filename: 'analytics.html'
+      template: "./src/pages/analytics/analytics.html",
+      filename: "analytics.html",
+      chunks: ["analytics"],
     }),
 
     new WebpackMd5Hash(),
@@ -128,10 +123,6 @@ module.exports = {
               preset: ['default'],
       },
       canPrint: true
-    }),
-
-    new webpack.DefinePlugin({
-      'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
+    })
   ]
 };

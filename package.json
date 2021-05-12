@@ -46,6 +46,6 @@
     "core-js": "3.4.1",
     "imagemin-svgo": "8.0.0",
     "imagemin-webp": "6.0.0",
-    "swiper": "6.1.1"
+    "swiper": "6.5.1"
   }
 }
